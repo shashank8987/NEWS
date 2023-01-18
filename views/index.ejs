@@ -4,17 +4,35 @@
 <div class="container"> 
     <div class="container d-flex my-0 mx-4" style="background-color: rgb(42, 42, 57);color:aliceblue;justify-content: center;align-items: center;border-radius: 15%;"><h3>See below the latest News</h3></div>
 </div>
-    
+<div class="modal" id="jokeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Here is your Joke</h5>
+          
+            
+          </button>
+        </div>
+        <div class="modal-body">
+          <%=joke%>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onClick="window.location.reload()" data-dismiss="modal">Close</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
 <div class="news-container ">
     <div class="news ">
-
+        
         <% articles.forEach(function(article,index){ %>
 
             <% if ((typeof article.url=='object') || (typeof article.title=='object') || (typeof article.urlToImage=='object') || (typeof article.content=='object')){ %>
                 <% } else{ %>
                     <a href="<%- article.url %>" target="_blank" class="news-box Hover-effect">
 
-                        <img src="<%- article.urlToImage %>" alt="Image">
+                        <img src="<%= article.urlToImage %>" alt="Image">
                         <h3>
                             <%- article.title %>
                         </h3>
@@ -32,6 +50,8 @@
                     <% }) %>
     </div>
 </div>
+
+
 
 
 <%- include("./partials/footer")  %>

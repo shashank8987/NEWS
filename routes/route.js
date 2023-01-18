@@ -11,9 +11,10 @@ router.get('/',async(req,res)=>{
         var url = 'http://newsapi.org/v2/top-headlines?' +
           'country=in&' +
           'apiKey=2637b1dde1f74f1d811fee2fe118b46b';
-
+          var url1 = 'https://v2.jokeapi.dev/joke/Any';
+          const newJoke =await axios.get(url1)
         const news_get =await axios.get(url)
-        res.render('index',{articles:news_get.data.articles})
+        res.render('index',{joke:newJoke.data.joke,articles:news_get.data.articles})
 
     } catch (error) {
         if(error.response){
@@ -21,6 +22,9 @@ router.get('/',async(req,res)=>{
         }
 
     }
+   
 })
+
+
 
 module.exports=router
