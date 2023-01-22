@@ -16,13 +16,13 @@ router.get('/',async(req,res)=>{
           const newFact=await axios.get(url2);
           const newJoke =await axios.get(url1)
         const news_get =await axios.get(url)
-        res.render('index',{fact:newFact.data.fact,joke:newJoke.data.setup,articles:news_get.data.articles})
+        res.render('index',{fact:newFact.data.fact,joke:newJoke.data.setup,punchline:newJoke.data.punchline,articles:news_get.data.articles})
 
     } catch (error) {
         if(error.response){
             console.log(error)
         }
-
+        
     }
    
 })

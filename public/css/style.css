@@ -1,7 +1,8 @@
 body{
     margin: 0;
     font-family: sans-serif;
-    background-color: rgba(245, 238, 238, 0.89);
+    background-image: url("./img/b1.jpg");
+    background-repeat: repeat;
 }
 nav{
     margin-bottom: 40px;

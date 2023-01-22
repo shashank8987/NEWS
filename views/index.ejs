@@ -2,18 +2,18 @@
 
 
 <div class="container"> 
-    <div class="container d-flex my-0 mx-4" style="background-color: rgb(42, 42, 57);color:aliceblue;justify-content: center;align-items: center;border-radius: 15%;"><h3>See below the latest News</h3></div>
+    <div class="container d-flex py-2 my-0 mx-4" style="background-color: rgba(42, 42, 57, 0.388);color:aliceblue;justify-content: center;align-items: center;"><h3>See below the latest News</h3></div>
 </div>
 <div class="modal" id="factModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Here is your fact</h5>
+        <h5 class="modal-title" style="font-weight: 620;" id="exampleModalLabel">Here is your fact</h5>
         
           
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body " style="font-weight: 530;">
         <%=fact%>
       </div>
       <div class="modal-footer">
@@ -27,13 +27,14 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Here is your Joke</h5>
+          <h5 class="modal-title" style="font-weight: 620;" id="exampleModalLabel">Here is your Joke</h5>
           
             
           </button>
         </div>
-        <div class="modal-body">
-          <%=joke%>
+        <div class="modal-body" style="font-weight: 530;">
+          <%=joke%><br><hr>
+          Punchline - <%=punchline%>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" onClick="window.location.reload()" data-dismiss="modal">Close</button>
