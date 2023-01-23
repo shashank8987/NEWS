@@ -15,7 +15,8 @@
   3) BootStrap
   4) Javascript
   5) Express
-  3) API's 
+  6) API's 
+  7) EJS
   
 ## Screenshots
 
